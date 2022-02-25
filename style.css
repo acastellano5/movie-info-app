@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden; 
+}
+
+body {
+    background-color: rgb(36, 36, 36);
+}
+
+header {
+    background-color: rgb(27, 27, 27);
+}
+
+nav {
+    max-width: 1175px;
+    margin: 0 auto;
+}
+
+.brand-name {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(0,191,255) !important;
+}
+
+.brand-name:hover {
+    cursor: pointer;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+.search-icon {
+    color: rgb(0,191,255);
+}
+
+.search-container {
+    background-color: rgb(27, 27, 27);
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transform: translateX(100%);
+    z-index: 10;
+    transition: all 0.15s ease-in;
+}
+
+.close-btn {
+    color: rgb(0,191,255);
+}
+
+.search-form {
+    width: 80%;
+    position: relative;
+    top: 35%;
+    margin: 0 auto;
+}
+
+.search-inp {
+    background-color: rgb(36, 36, 36);
+    border: none;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    padding: 0.5em;
+    width: 100%;
+    color: rgb(199, 199, 199);
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: black;
+    background-color: rgb(0,191,255);
+    padding: 0.5em;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.active {
+    transform: translateX(0);
+}
+
+.categories {
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.genre {
+    width: fit-content;
+    background-color: rgb(0,191,255);
+    border: 1px solid transparent;
+    margin: 0.5em;
+    border-radius: 0.25rem;
+    transition: all 0.15s ease-in;
+}
+
+.genre:hover {
+    color: rgb(0,191,255);
+    background-color: transparent;
+    border: 1px solid rgb(0,191,255);
+}
+
+.movie-card {
+    width: 80%;
+    max-width: 258px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.movie-caption {
+    background-color: rgb(0,191,255);
+}
+
+.rating {
+    background-color: rgb(27, 27, 27);
+    color: rgb(223, 223, 223);
+    padding: 0.25em;
+    border-radius: 5px;
+}
+
+.overview {
+    color: black;
+    background-color: rgb(223, 223, 223);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateY(200%);
+    transition: all 0.25s ease-in;
+}
+
+.show-overview {
+    transform: translateY(0);
+}
+
+.moreLink {
+    font-weight: bold;
+    margin-left: 3px;
+    color: #0d6efd;
+}
+
+.moreLink:hover {
+    color: #0b5fdd;
+    text-decoration: underline;
+}
+
+.more-container {
+    position: fixed;
+    background-color: rgb(223, 223, 223);
+    left: 0; 
+    right: 0; 
+    top: 30%;
+    margin-left: auto; 
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    max-height: 500px;
+    width: 85%;
+    max-width: 500px;
+    z-index: 10;
+    overflow-y: scroll;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.fixed {
+    overflow: hidden;
+}
+
+
+@media (min-width: 768px) {
+    .search-container {
+        background-color: transparent;
+        position: relative;
+        transform: translateX(0);
+        z-index: 0;
+        transition: none;
+        width: 30%;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1800px) {
+    :root {
+        font-size: 25px;
+    }
+
+    .movie-card {
+        max-width: 350px;
+    }
+
+    .info-btn > svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    .search-btn > svg {
+        height: 25px;
+        width: 25px;
+    }
+}
